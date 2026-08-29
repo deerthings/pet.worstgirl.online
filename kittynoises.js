@@ -1,84 +1,56 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catboy</title>
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
-  </head>
+/*
+*highly* derivative of:
+https://nomnomnami.com/games/random-oc
+thank you for being smarter than me </3
+*/
 
-  <body>
-    <h1>kittynoises</h1>
-    <p><img src="img/meowmeow.png" style="image-rendering:auto;width:auto;height:200px"></p>
-        <div id="story">
-            <p><span id="meowspeak1"></span><span id="meowspeak2"></span><span id="meowspeak3"></span><span id="meowspeak4"></span><span id="meowspeak5"></span></p>
-        </div>
+function getRandomInt(min, max) {
+  	return Math.floor(Math.random() * (max - min)) + min;
+}
+
+const meow1 = ["meow!", "mrreoow", "mrrap", "mrmfmrrr :3", "nnamsajmsahjasm", "mfrmmrmrmfph", "rreeoow", "owo", "meeow", "mrmrmrfmr", "nya", "mrrrp", "mrmrmrr", "nyaaaaa", "rawwwwranyaayawm", "bweh >w<", "uwu", "ouo", ">///<", "awawa", "awa...", "mrawrmwarm", "meooowwwe", "meowewre", "nyan!", "nyanyanyan~", "kehehe :3", "uwaa ><", "wawa!", "awuuuwa.."];
+
+let meow2 = ["meow!", "mrreoow", "mrrap", "mrmfmrrr :3", "nnamsajmsahjasm", "mfrmmrmrmfph", "rreeoow", "owo", "meeow", "mrmrmrfmr", "nya", "mrrrp", "mrmrmrr", "nyaaaaa", "rawwwwranyaayawm", "bweh >w<", "uwu", "ouo", ">///<", "awawa", "awa...", "mrawrmwarm", "meooowwwe", "meowewre", "nyan!", "nyanyanyan~", "kehehe :3", "uwaa ><", "wawa!", "awuuuwa.."];
+
+let meow3 = ["meow!", "mrreoow", "mrrap", "mrmfmrrr :3", "nnamsajmsahjasm", "mfrmmrmrmfph", "rreeoow", "owo", "meeow", "mrmrmrfmr", "nya", "mrrrp", "mrmrmrr", "nyaaaaa", "rawwwwranyaayawm", "bweh >w<", "uwu", "ouo", ">///<", "awawa", "awa...", "mrawrmwarm", "meooowwwe", "meowewre", "nyan!", "nyanyanyan~", "kehehe :3", "uwaa ><", "wawa!", "awuuuwa.."];
+
+let meow4 = ["meow!", "mrreoow", "mrrap", "mrmfmrrr :3", "nnamsajmsahjasm", "mfrmmrmrmfph", "rreeoow", "owo", "meeow", "mrmrmrfmr", "nya", "mrrrp", "mrmrmrr", "nyaaaaa", "rawwwwranyaayawm", "bweh >w<", "uwu", "ouo", ">///<", "awawa", "awa...", "mrawrmwarm", "meooowwwe", "meowewre", "nyan!", "nyanyanyan~", "kehehe :3", "uwaa ><", "wawa!", "awuuuwa.."];
+
+let meow5 = ["meow!", "mrreoow", "mrrap", "mrmfmrrr :3", "nnamsajmsahjasm", "mfrmmrmrmfph", "rreeoow", "owo", "meeow", "mrmrmrfmr", "nya", "mrrrp", "mrmrmrr", "nyaaaaa", "rawwwwranyaayawm", "bweh >w<", "uwu", "ouo", ">///<", "awawa", "awa...", "mrawrmwarm", "meooowwwe", "meowewre", "nyan!", "nyanyanyan~", "kehehe :3", "uwaa ><", "wawa!", "awuuuwa.."];
+
+generateStory();
+
+function newMeow1(){
+    let meowspeak1 = meow1[getRandomInt(0, meow1.length)];
     
-    <button id="generate" onclick="generateStory()">click :3</button>
-</body>
-<script src="kittynoises.js"></script>
-
-<style>
-body {
-  width: 300px;
-  color: #fefefe;
-  font-family: 'Courier New', Courier, monospace;">
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  height: min-content;
-  font-size: 13px;
-  text-shadow: 0px 2px #ffffff;
-  background-color: black;
-  text-align: center;
+    document.getElementById("meowspeak1").innerHTML = ` ${meowspeak1}`;   
+}
+function newMeow2(){
+    let meowspeak2 = meow2[getRandomInt(0, meow2.length)];
+    
+    document.getElementById("meowspeak2").innerHTML = ` ${meowspeak2}`;   
+}
+function newMeow3(){
+    let meowspeak3 = meow3[getRandomInt(0, meow3.length)];
+    
+    document.getElementById("meowspeak3").innerHTML = ` ${meowspeak3}`;   
+}
+function newMeow4(){
+    let meowspeak4 = meow4[getRandomInt(0, meow4.length)];
+    
+    document.getElementById("meowspeak4").innerHTML = ` ${meowspeak4}`;   
+}
+function newMeow5(){
+    let meowspeak5 = meow5[getRandomInt(0, meow5.length)];
+    
+    document.getElementById("meowspeak5").innerHTML = ` ${meowspeak5}`;   
 }
 
-#generate {
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    width:5rem;
+function generateStory(){
+    newMeow2();
+    newMeow1();
+    newMeow3();
+    newMeow4();
 }
 
-mark {
-    color: #000000;
-    background-color: #ffffff;
-}
 
-content {
-  color: #fefefe;
-}
-
-img:hover {
-    transform: scale(1.05);
-    border-radius: 0;
-  }
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 50px;
-}
-
-a {
-  color: #8e8e8e;
-  text-shadow: 0px 2px #000000;
-}
-
-a:visited {
-  color: #8e8e8e;
-}
-
-h1 {
-	font-family: "janyk", monospace;
-	font-variant: small-caps;
-	position: relative;
-	top: 0.9em;
-	z-index: 5;
-	filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
-}
-
-h2 {
-			font-family: "janyk", monospace;
-}
-
-    </style>>
